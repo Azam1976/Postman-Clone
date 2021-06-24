@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300italic,regular,italic);
+
+@mixin flex($justifyContent, $alignItems, $flexWrap, $flexDirection) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-wrap: $flexWrap;
+  flex-direction: $flexDirection;
+}
+
+$themeColor: #eb5824;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+  outline: none;
+  text-decoration: none;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+// header
+header {
+  padding: 30px 0px;
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: 100;
+    color: $themeColor;
+  }
+
+  .buttonGroup {
+    margin-top: 20px;
+    @include flex(center, center, wrap, stretch);
+    .singleButton {
+      display: block;
+      color: #fff;
+      margin: 0px 10px;
+      padding: 7px 20px;
+      border-radius: 3px;
+      box-shadow: 0 0 3px #1e1e1e;
+      span {
+        padding: 0 5px;
+      }
+    }
+
+    .star {
+      background: #090c10;
+    }
+
+    .fork {
+      color: #000;
+    }
+  }
+}
+
+// for the laptops and iPads
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 700px;
+  }
+}
+
+// for the mobile and tabs
+@media screen and (max-width: 768px) {
+  * {
+    cursor: default !important;
+  }
+
+  .container {
+    width: 95%;
+  }
+}

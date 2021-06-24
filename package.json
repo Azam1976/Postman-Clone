@@ -1,0 +1,26 @@
+{
+  "name": "PostMan-Clone",
+  "version": "1.0.0",
+  "description": "A clone of postman",
+  "main": "app.js",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "keywords": [
+    "Postman clone",
+    "REST client",
+    "Thunder Client",
+    "Client",
+    "API tester",
+    "Http client"
+  ],
+  "author": {
+    "name": "Ratul (devR)",
+    "email": "azammmgol@gmail.com",
+    "url": "http://devr.netlify.app"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "snowpack": "^3.6.0"
+  }
+}
